@@ -3,7 +3,7 @@ let y = 50;
 let dx = 3;
 let dy = 2;
 let score = 0;
-let time = 10;
+let time = 20;
 let isRunning = true;
 
 const arena = document.getElementById('arena');
@@ -62,7 +62,7 @@ function resetGame() {
   dx = 3;
   dy = 2;
   score = 0;
-  time = 10;
+  time = 20;
   isRunning = true;
 
   star.disabled = false;
