@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Estrela</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-panel">
+      <header class="hud">
+        <div class="score-box">
+          <span>Pontos</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="timer-box">
+          <span>Tempo</span>
+          <strong id="time">10</strong>
+        </div>
+      </header>
+
+      <section id="arena" class="arena" aria-label="Área do jogo">
+        <button id="star" class="star" type="button" aria-label="Clique na bola">●</button>
+      </section>
+
+      <footer class="actions">
+        <button id="restart" class="restart" type="button">Reiniciar</button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

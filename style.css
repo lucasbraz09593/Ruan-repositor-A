@@ -1,0 +1,134 @@
+:root {
+  --bg: #111827;
+  --panel: #1f2937;
+  --accent: #fbbf24;
+  --accent-strong: #f59e0b;
+  --text: #f9fafb;
+  --muted: #cbd5e1;
+  --button: #2563eb;
+  --button-hover: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, var(--bg));
+  color: var(--text);
+}
+
+.game-panel {
+  width: min(420px, 90vw);
+  background: rgba(31, 41, 55, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.score-box,
+.timer-box {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.score-box span,
+.timer-box span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.score-box strong,
+.timer-box strong {
+  display: block;
+  margin-top: 6px;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.arena {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  border: 2px solid rgba(148, 163, 184, 0.2);
+  border-radius: 16px;
+}
+
+.star {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fef3c7, #fbbf24 45%, #f59e0b 100%);
+  color: #fff7d6;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 0 22px rgba(251, 191, 36, 0.7);
+  user-select: none;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.08);
+}
+
+.star:active {
+  transform: scale(0.96);
+}
+
+.star:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.restart {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--button);
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.restart:hover {
+  background: var(--button-hover);
+}
+
+.restart:active {
+  transform: scale(0.98);
+}
